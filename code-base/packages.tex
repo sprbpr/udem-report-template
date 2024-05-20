@@ -1,0 +1,59 @@
+\usepackage{graphicx, float}
+\usepackage{subcaption}
+
+\usepackage{fontspec}
+\usepackage{tocloft}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+\usepackage{vmargin}
+\usepackage{fancyhdr}
+
+\usepackage[hidelinks]{hyperref}
+
+\setmainfont{Rosarivo}[
+Path=./fonts/,
+Extension = .ttf,
+UprightFont=*-Regular,
+% BoldFont=*-Bold,
+ItalicFont=*-Italic,
+% BoldItalicFont=*-BoldItalic
+]
+
+\setmarginsrb{2.7 cm}{0.5 cm}{2.7 cm}{2.5 cm}{1.0 cm}{1.5 cm}{1.0 cm}{1.5 cm}
+\renewcommand{\baselinestretch}{1.3}
+
+% \fancyhead[L]{\includesvg[scale = 0.3]{images/logo.svg}}
+% \fancyhead[R]{\LARGE \Course \vspace{0.4cm}}
+% \fancyfoot[C]{\large \thepage}
+\pagestyle{fancy}
+\setlength\cftparskip{8pt}
+
+\renewcommand{\contentsname}{\huge Contents}
+
+\titleformat{\section}{\huge\bfseries}{\thesection}{1em}{}
+\renewcommand\cftsecfont{\Large}
+\renewcommand\cftsecpagefont{\Large}
+\renewcommand\cftsecdotsep{\cftdot}
+
+\titleformat*{\subsection}{\Large\bfseries}
+\renewcommand\cftsubsecfont{\large}
+\renewcommand\cftsubsecpagefont{\large}
+\renewcommand\cftsubsecdotsep{\cftdot}
+% \setlength{\cftsubsecnumwidth}{1.1cm}
+
+\titleformat*{\subsubsection}{\large\bfseries}
+
+\renewcommand\listfigurename{\huge List of Figures}
+\renewcommand\cftfigfont{\large}
+\renewcommand\cftfigpagefont{\Large}
+\renewcommand\cftfigdotsep{\cftdot}
+% \setlength{\cftfignumwidth}{1.1cm}
+
+% \setlength{\cfttabnumwidth}{1.1cm}
+
+\renewcommand\listtablename{\huge List of Tables}
+\renewcommand\cfttabfont{\large}
+
+\renewcommand\cftsubsubsecdotsep{\cftdot}
+\renewcommand\cfttabdotsep{\cftdot}
