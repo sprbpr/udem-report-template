@@ -1,59 +1,70 @@
-\usepackage{graphicx, float}
-\usepackage{subcaption}
-
-\usepackage{fontspec}
-\usepackage{tocloft}
-\usepackage{titlesec}
-\usepackage{xcolor}
-
+% Page Layout Packages
 \usepackage{vmargin}
-\usepackage{fancyhdr}
-
-\usepackage[hidelinks]{hyperref}
-
-\setmainfont{Rosarivo}[
-Path=./fonts/,
-Extension = .ttf,
-UprightFont=*-Regular,
-BoldFont=*-Bold,
-ItalicFont=*-Italic,
-% BoldItalicFont=*-BoldItalic
-]
-
+% {left}{top}{right}{bottom}{headheight}{headsep}{footheight}{footskip}
 \setmarginsrb{2.7 cm}{0.5 cm}{2.7 cm}{2.5 cm}{1.0 cm}{1.5 cm}{1.0 cm}{1.5 cm}
+
+% Spacing Packages
 \renewcommand{\baselinestretch}{1.3}
 
+% Title Packages
+\usepackage{titlesec}
+% {command}[shape]{format}{label}{sep}{before-code}[after-code]
+\titleformat{\section}{\huge\bfseries}{\thesection}{1em}{}
+% {command}[shape]{format}
+\titleformat*{\subsection}{\Large\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
+
+% ToC Packages
+\usepackage{tocloft}
+\setlength\cftparskip{8pt}                      % Space between entries in ToC, LoF, LoT
+\renewcommand{\contentsname}{\huge Contents}    % Font size of "Contents" title
+\renewcommand\cftsecfont{\Large}                % Font size of sections
+\renewcommand\cftsecpagefont{\Large}            % Font size of sections' page nums
+\renewcommand\cftsecdotsep{\cftdot}             % Dot line between sec and page nums
+\renewcommand\cftsubsecfont{\large}             % Font size of subsections
+\renewcommand\cftsubsecpagefont{\large}         % Font size of subsections' page nums
+\renewcommand\cftsubsecdotsep{\cftdot}          % Dot line between subsec and page nums
+% \setlength{\cftsubsecnumwidth}{1.1cm}         % Space between subsecs and their nums
+\renewcommand\cftsubsubsecdotsep{\cftdot}       % Dot line between subsubsec and page nums
+
+% LoF Packages
+\renewcommand\listfigurename{\huge List of Figures}     % Font size of LoF title
+\renewcommand\cftfigfont{\large}                % Font size of figs
+\renewcommand\cftfigpagefont{\large}            % Font size of figs' page nums
+\renewcommand\cftfigdotsep{\cftdot}             % Dot line between figs and page nums
+% \setlength{\cftfignumwidth}{1.1cm}            % Space between figs and their nums
+
+% LoT Packages
+\renewcommand\listtablename{\huge List of Tables}       % Font size of LoT title
+\renewcommand\cfttabfont{\large}                % Font size of tabs
+\renewcommand\cfttabpagefont{\large}            % Font size of tabs' page nums
+\renewcommand\cfttabdotsep{\cftdot}             % Dot line between tabs and page nums
+% \setlength{\cfttabnumwidth}{1.1cm}            % Space between tabs and their nums
+
+% Header Packages
+\usepackage{fancyhdr}
 % \fancyhead[L]{\includesvg[scale = 0.3]{images/logo.svg}}
 % \fancyhead[R]{\LARGE \Course \vspace{0.4cm}}
 % \fancyfoot[C]{\large \thepage}
-\pagestyle{fancy}
-\setlength\cftparskip{8pt}
 
-\renewcommand{\contentsname}{\huge Contents}
+% Image Packages
+\usepackage{graphicx}
+\usepackage{float}              % For using the "H" specifier in figs.
+\usepackage{subcaption}         % For using two separate subcap in side-by-side figs.
 
-\titleformat{\section}{\huge\bfseries}{\thesection}{1em}{}
-\renewcommand\cftsecfont{\Large}
-\renewcommand\cftsecpagefont{\Large}
-\renewcommand\cftsecdotsep{\cftdot}
+% Font Packages
+\usepackage{fontspec}           % For changing the main font.
+\setmainfont{Rosarivo}[
+Path=./fonts/,                  % Font path.
+Extension = .ttf,               % Font extension.
+UprightFont=*-Regular,          % Regular font.
+BoldFont=*-Bold,                % Bold font.
+ItalicFont=*-Italic,            % Italic font.
+% BoldItalicFont=*-BoldItalic
+]
 
-\titleformat*{\subsection}{\Large\bfseries}
-\renewcommand\cftsubsecfont{\large}
-\renewcommand\cftsubsecpagefont{\large}
-\renewcommand\cftsubsecdotsep{\cftdot}
-% \setlength{\cftsubsecnumwidth}{1.1cm}
+% Hyperlinks Packages
+\usepackage[hidelinks]{hyperref}
 
-\titleformat*{\subsubsection}{\large\bfseries}
-
-\renewcommand\listfigurename{\huge List of Figures}
-\renewcommand\cftfigfont{\large}
-\renewcommand\cftfigpagefont{\Large}
-\renewcommand\cftfigdotsep{\cftdot}
-% \setlength{\cftfignumwidth}{1.1cm}
-
-% \setlength{\cfttabnumwidth}{1.1cm}
-
-\renewcommand\listtablename{\huge List of Tables}
-\renewcommand\cfttabfont{\large}
-
-\renewcommand\cftsubsubsecdotsep{\cftdot}
-\renewcommand\cfttabdotsep{\cftdot}
+% Color Packages
+\usepackage{xcolor}
