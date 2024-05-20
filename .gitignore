@@ -364,3 +364,6 @@ Temporary Items
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,latex
+
+# Ignore font manipulation app and all generated fonts
+font-forge/
